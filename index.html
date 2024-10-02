@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Diese Seite wurde von Simon erstellt c: -->
+<title>
+Fightroom - Regeln</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Soundboard von Simon">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<div class="container">
+<h2>DAS KRASSESTE SOUNDBOARD</h2>
+<p><b><font color=e9cf6c</font></font></b></p>
+
+<p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> Das beste Soundboard, was die Welt jemals gesehen hat!</span></b></p>
+<p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> **Erstellt von Simon**</span></b></p>
+    <a class="button" href="#" onclick="playSound('among_us_role_reveal')">Among Us Role Reveal</a>
+    <a class="button" href="#" onclick="playSound('bruh')">Bruh</a>
+    <a class="button" href="#" onclick="playSound('error')">Error</a>
+    <a class="button" href="#" onclick="playSound('fortnite_death')">Fortnite death</a>
+    <a class="button" href="#" onclick="playSound('loading')">Among Us Role Reveal</a>
+    <a class="button" href="#" onclick="playSound('olaf_scholz')">Olaf Scholz</a>
+    <a class="button" href="#" onclick="playSound('okay_lets_go')">Okay lets go</a>
+    <a class="button" href="#" onclick="playSound('rizz')">Rizz</a>
+    <a class="button" href="#" onclick="playSound('taco_bell_bong')">Taco bell bong</a>
+    <a class="button" href="#" onclick="playSound('the_weeknd_rizz')">The weeknd rizz</a>
+    <a class="button" href="#" onclick="playSound('vine_boom')">Vine boom</a>
+    <a class="button" href="#" onclick="playSound('windows_10_error')">Windows 10 error</a>
+
+    <!-- Audio Elemente -->
+        <div class="player">
+            <audio id="among_us_role_reveal">
+                <source src="audio/among_us_role_reveal.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="bruh">
+                <source src="audio/bruh.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="error">
+                <source src="audio/error.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="fortnite_death">
+                <source src="audio/fortnite_death.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="loading">
+                <source src="audio/loading.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="olaf_scholz">
+                <source src="audio/olaf_scholz.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="okay_lets_go">
+                <source src="audio/okay_lets_go.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="rizz">
+                <source src="audio/rizz.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="taco_bell_bong">
+                <source src="audio/taco_bell_bong.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="the_weeknd_rizz">
+                <source src="audio/the_weeknd_rizz.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="vine_boom">
+                <source src="audio/vine_boom.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="windows_10_error">
+                <source src="audio/windows_10_error.mp3" type="audio/mpeg" />
+            </audio>
+        </div>
+
+    <script>
+        // Funktion zum Abspielen des Sounds
+        function playSound(audioId) {
+            // Pause alle Audios
+            $("audio").each(function() {
+                this.pause();
+                this.currentTime = 0; // Zurück zum Anfang setzen
+            });
+
+            // Spiele den ausgewählten Audio-Clip ab
+            var audio = document.getElementById(audioId);
+            if (audio) {
+                audio.play();
+            }
+        }
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+
+<script src="js/libs/bootstrap/bootstrap-transition.js"></script>
+<script src="js/libs/bootstrap/bootstrap-collapse.js"></script>
+
+<script src="js/script.js"></script>
+</div>
+</html>
