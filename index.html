@@ -1,21 +1,22 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <!-- Diese Seite wurde von Simon erstellt c: -->
-<title>
-Soundboard</title>
+<title>Soundboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Soundboard von Simon">
 <link rel="stylesheet" href="css/style.css" />
 <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 </head>
+<body>
 <div class="container">
-<h2>DAS KRASSESTE SOUNDBOARD</h2>
-<p><b><font color=e9cf6c</font></font></b></p>
+    <h2>DAS KRASSESTE SOUNDBOARD</h2>
+    <p><b><font color=e9cf6c</font></font></b></p>
 
-<p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> Das beste Soundboard, was die Welt jemals gesehen hat!</span></b></p>
-<p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> **Erstellt von Simon**</span></b></p>
+    <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px;">Das beste Soundboard, was die Welt jemals gesehen hat!</span></b></p>
+    <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px;">**Erstellt von Simon**</span></b></p>
+
+    <!-- Buttons zum Abspielen der Sounds -->
     <a class="button" href="#" onclick="playSound('among_us_role_reveal', event)">Among Us Role Reveal</a>
     <a class="button" href="#" onclick="playSound('apored_jajaja', event)">ApoRed jajaja</a>
     <a class="button" href="#" onclick="playSound('apored_ich_bin_ein_macher', event)">ApoRed ich bin ein Macher</a>
@@ -46,125 +47,26 @@ Soundboard</title>
     <a class="button" href="#" onclick="playSound('windows_10_error', event)">Windows 10 error</a>
     <a class="button" href="#" onclick="playSound('zois_singt_shakira', event)">Zois singt Shakira</a>
 
-    <!-- Audio Elemente -->
-        <div class="player">
-            <audio id="among_us_role_reveal">
-                <source src="audio/among_us_role_reveal.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="apored_ich_bin_ein_macher">
-                <source src="audio/apored_ich_bin_ein_macher.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="apored_jajaja">
-                <source src="audio/apored_jajaja.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="apored_will_er_mich_ficken">
-                <source src="audio/apored_will_er_mich_ficken.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="bing_bong_der_eiermann_ist_da">
-                <source src="audio/bing_bong_der_eiermann_ist_da.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="bruh">
-                <source src="audio/bruh.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="deine_mutter_hoert_haftbefehl">
-                <source src="audio/deine_mutter_hoert_haftbefehl.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="error">
-                <source src="audio/error.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="eww_brother_eww">
-                <source src="audio/eww_brother_eww.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="farid_bang_beleidigt">
-                <source src="audio/farid_bang_beleidigt.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="farid_bang_lache">
-                <source src="audio/farid_bang_lache.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="fortnite_death">
-                <source src="audio/fortnite_death.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="hoert_auf_anzurufen_mein_vater_ist_sauer">
-                <source src="audio/hoert_auf_anzurufen_mein_vater_ist_sauer.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="leute_was_soll_die_scheisse">
-                <source src="audio/leute_was_soll_die_scheisse.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="loading">
-                <source src="audio/loading.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="monte_singt">
-                <source src="audio/monte_singt.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="okay_lets_go">
-                <source src="audio/okay_lets_go.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="olaf_scholz">
-                <source src="audio/olaf_scholz.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="pl_pl_pl_plunderstueck">
-                <source src="audio/pl_pl_pl_plunderstueck.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="rizz">
-                <source src="audio/rizz.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="taco_bell_bong">
-                <source src="audio/taco_bell_bong.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="talahon">
-                <source src="audio/talahon.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="the_weeknd_rizz">
-                <source src="audio/the_weeknd_rizz.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="turkglas_achmet_guenezly">
-                <source src="audio/turkglas_achmet_guenezly.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="vine_boom">
-                <source src="audio/vine_boom.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="wallah_krise">
-                <source src="audio/wallah_krise.mp3" type="audio/mpeg" />
-            </audio>
-             <audio id="was_ist_denn_hier_los">
-                <source src="audio/was_ist_denn_hier_los.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="windows_10_error">
-                <source src="audio/windows_10_error.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="zois_singt_shakira">
-                <source src="audio/zois_singt_shakira.mp3" type="audio/mpeg" />
-            </audio>
-        </div>
+    <!-- Audio-Elemente werden nicht vordefiniert, sondern dynamisch geladen -->
+    
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // Funktion zum Abspielen des Sounds
-    function playSound(audioId, event) {
-        // Verhindere das Standard-Link-Verhalten
-        event.preventDefault();
+    let currentAudio = null; // Variable für das aktuell abgespielte Audio
 
-        // Stoppe alle anderen Audios
-        document.querySelectorAll('audio').forEach(function(audio) {
-            audio.pause();
-            audio.currentTime = 0; // Zurück zum Anfang setzen
-        });
+        function playSound(audioId) {
+            // Stoppe das aktuelle Audio, wenn es spielt
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0; // Zurücksetzen auf den Anfang
+            }
 
-        // Überprüfen, ob das Audio-Element bereits existiert
-        var existingAudio = document.getElementById(audioId);
-
-        if (!existingAudio) {
-            // Wenn das Audio noch nicht existiert, erstelle es dynamisch
-            var audio = document.createElement('audio');
-            audio.id = audioId;
-            audio.src = 'audio/' + audioId + '.mp3'; // Quelle zur MP3-Datei
-            document.body.appendChild(audio);
-            audio.play();
-        } else {
-            // Wenn es existiert, spiele es einfach ab
-            existingAudio.play();
+            // Erstelle den Pfad zur Audio-Datei
+            const audioPath = `audio/${audioId}.mp3`;
+            currentAudio = new Audio(audioPath);
+            currentAudio.play(); // Audio abspielen
         }
-    }
 
     // Funktion, um eine zufällige Farbe zu erhalten
     function getRandomColor() {
@@ -185,29 +87,6 @@ Soundboard</title>
     $(document).ready(function() {
         applyRandomColors();
     });
-
-    document.addEventListener("DOMContentLoaded", function() {
-        let lazyAudios = document.querySelectorAll('.lazy-audio');
-
-        let observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    let button = entry.target;
-                    button.dataset.loaded = "true"; // Kennzeichne den Button als geladen
-                    observer.unobserve(button); // Beobachtung aufheben, nachdem das Audio geladen wurde
-                }
-            });
-        });
-
-        lazyAudios.forEach(function(audioButton) {
-            observer.observe(audioButton);
-        });
-    });  
-
 </script>
-<script src="js/libs/bootstrap/bootstrap-transition.js"></script>
-<script src="js/libs/bootstrap/bootstrap-collapse.js"></script>
-
-<script src="js/script.js"></script>
-</div>
+</body>
 </html>
