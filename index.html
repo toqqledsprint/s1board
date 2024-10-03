@@ -17,9 +17,6 @@ Soundboard</title>
 
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> Das beste Soundboard, was die Welt jemals gesehen hat!</span></b></p>
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> **Erstellt von Simon**</span></b></p>
-<div id="loadingGif" style="text-align: center;">
-    <a> <img src="img/loading.gif" style="width: 100px; height: auto;"> </a>
-</div>
     <a class="button" href="#" onclick="playSound('among_us_role_reveal', event)">Among Us Role Reveal</a>
     <a class="button" href="#" onclick="playSound('apored_jajaja', event)">ApoRed jajaja</a>
     <a class="button" href="#" onclick="playSound('apored_ich_bin_ein_macher', event)">ApoRed ich bin ein Macher</a>
@@ -163,7 +160,6 @@ Soundboard</title>
             return colors[Math.floor(Math.random() * colors.length)];
         }
 
-        // Funktion, um zufällige Farben auf alle Buttons anzuwenden
         function applyRandomColors() {
             var buttons = document.querySelectorAll('a.button');
             buttons.forEach(function(button) {
@@ -172,18 +168,10 @@ Soundboard</title>
             });
         }
 
-        window.onload = function() {
-        // Mache die Buttons sichtbar
-        var buttons = document.querySelectorAll('a.button');
-        buttons.forEach(function(button) {
-            button.style.display = 'inline-block'; // Zeige die Buttons an
+        // Anwenden der zufälligen Farben, sobald das Dokument bereit ist
+        $(document).ready(function() {
+            applyRandomColors();
         });
-
-        // Wende zufällige Farben auf die Buttons an
-        applyRandomColors();
-
-        document.getElementById('loadingGif').style.display = 'none';
-    };
 
     </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
