@@ -15,7 +15,6 @@ body {
 }
 
 .container {
-    border: 2px solid #2c3136;
     padding: 20px;
     background-color: #292f33;
     box-shadow: 1px 1px 8px -3px #000;
@@ -53,22 +52,10 @@ a.button {
             padding: 14px 20px;
             color: #292f33; /* Textfarbe Weiß */
             border-radius: 5px;
-            display: none;
             transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
             margin: 3px 0; /* Abstand oben und unten von 10px */
+            display: inline-block;
         }
-
-audio {
-    display: none;
-}
-
-#loadingGif {
-    position: fixed; /* Damit es über dem Rest der Seite bleibt */
-    top: 50%; /* Zentriere vertikal */
-    left: 50%; /* Zentriere horizontal */
-    transform: translate(-50%, -50%); /* Korrektur der Position */
-    z-index: 9999; /* Über anderen Inhalten anzeigen */
-}
 
 @media only screen and (min-width: 768px) {
   body {
