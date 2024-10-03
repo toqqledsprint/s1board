@@ -7,6 +7,7 @@ Soundboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Soundboard von Simon">
 <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <div class="container">
 <h2>DAS KRASSESTE SOUNDBOARD</h2>
@@ -15,28 +16,65 @@ Soundboard</title>
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> Das beste Soundboard, was die Welt jemals gesehen hat!</span></b></p>
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> **Erstellt von Simon**</span></b></p>
     <a class="button" href="#" onclick="playSound('among_us_role_reveal')">Among Us Role Reveal</a>
+    <a class="button" href="#" onclick="playSound('apored_jajaja')">ApoRed jajaja</a>
+    <a class="button" href="#" onclick="playSound('apored_ich_bin_ein_macher')">ApoRed ich bin ein Macher</a>
+    <a class="button" href="#" onclick="playSound('apored_will_er_mich_ficken')">ApoRed will er mich f*cken</a>
+    <a class="button" href="#" onclick="playSound('bing_bong_der_eiermann_ist_da')">Bing Bong der Eiermann ist da</a>
     <a class="button" href="#" onclick="playSound('bruh')">Bruh</a>
+    <a class="button" href="#" onclick="playSound('deine_mutter_hoert_haftbefehl')">Deine Mutter hört Haftbefehl</a>
     <a class="button" href="#" onclick="playSound('error')">Error</a>
+    <a class="button" href="#" onclick="playSound('eww_brother_eww')">Eww brother eww</a>
+    <a class="button" href="#" onclick="playSound('farid_bang_beleidigt')">Farid Bang beleidigt</a>
+    <a class="button" href="#" onclick="playSound('farid_bang_lache')">Farid Bang lache</a>
     <a class="button" href="#" onclick="playSound('fortnite_death')">Fortnite death</a>
     <a class="button" href="#" onclick="playSound('loading')">Loading</a>
-    <a class="button" href="#" onclick="playSound('olaf_scholz')">Olaf Scholz</a>
+    <a class="button" href="#" onclick="playSound('monte_singt')">Monte singt</a>
     <a class="button" href="#" onclick="playSound('okay_lets_go')">Okay lets go</a>
+    <a class="button" href="#" onclick="playSound('olaf_scholz')">Olaf Scholz</a>
     <a class="button" href="#" onclick="playSound('rizz')">Rizz</a>
     <a class="button" href="#" onclick="playSound('taco_bell_bong')">Taco bell bong</a>
+    <a class="button" href="#" onclick="playSound('talahon')">Talahon</a>
     <a class="button" href="#" onclick="playSound('the_weeknd_rizz')">The weeknd rizz</a>
     <a class="button" href="#" onclick="playSound('vine_boom')">Vine boom</a>
+    <a class="button" href="#" onclick="playSound('wallah_krise')">Wallah Krise</a>
+    <a class="button" href="#" onclick="playSound('was_ist_denn_hier_los')">Was ist denn hier los?</a>
     <a class="button" href="#" onclick="playSound('windows_10_error')">Windows 10 error</a>
+    <a class="button" href="#" onclick="playSound('zois_singt_shakira')">Zois singt Shakira</a>
 
     <!-- Audio Elemente -->
         <div class="player">
             <audio id="among_us_role_reveal">
                 <source src="audio/among_us_role_reveal.mp3" type="audio/mpeg" />
             </audio>
+            <audio id="apored_ich_bin_ein_macher">
+                <source src="audio/apored_ich_bin_ein_macher.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="apored_jajaja">
+                <source src="audio/apored_jajaja.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="apored_will_er_mich_ficken">
+                <source src="audio/apored_will_er_mich_ficken.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="bing_bong_der_eiermann_ist_da">
+                <source src="audio/bing_bong_der_eiermann_ist_da.mp3" type="audio/mpeg" />
+            </audio>
             <audio id="bruh">
                 <source src="audio/bruh.mp3" type="audio/mpeg" />
             </audio>
+            <audio id="deine_mutter_hoert_haftbefehl">
+                <source src="audio/deine_mutter_hoert_haftbefehl.mp3" type="audio/mpeg" />
+            </audio>
             <audio id="error">
                 <source src="audio/error.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="eww_brother_eww">
+                <source src="audio/eww_brother_eww.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="farid_bang_beleidigt">
+                <source src="audio/farid_bang_beleidigt.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="farid_bang_lache">
+                <source src="audio/farid_bang_lache.mp3" type="audio/mpeg" />
             </audio>
             <audio id="fortnite_death">
                 <source src="audio/fortnite_death.mp3" type="audio/mpeg" />
@@ -44,11 +82,14 @@ Soundboard</title>
             <audio id="loading">
                 <source src="audio/loading.mp3" type="audio/mpeg" />
             </audio>
-            <audio id="olaf_scholz">
-                <source src="audio/olaf_scholz.mp3" type="audio/mpeg" />
+            <audio id="monte_singt">
+                <source src="audio/monte_singt.mp3" type="audio/mpeg" />
             </audio>
             <audio id="okay_lets_go">
                 <source src="audio/okay_lets_go.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="olaf_scholz">
+                <source src="audio/olaf_scholz.mp3" type="audio/mpeg" />
             </audio>
             <audio id="rizz">
                 <source src="audio/rizz.mp3" type="audio/mpeg" />
@@ -56,20 +97,32 @@ Soundboard</title>
             <audio id="taco_bell_bong">
                 <source src="audio/taco_bell_bong.mp3" type="audio/mpeg" />
             </audio>
+            <audio id="talahon">
+                <source src="audio/talahon.mp3" type="audio/mpeg" />
+            </audio>
             <audio id="the_weeknd_rizz">
                 <source src="audio/the_weeknd_rizz.mp3" type="audio/mpeg" />
             </audio>
             <audio id="vine_boom">
                 <source src="audio/vine_boom.mp3" type="audio/mpeg" />
             </audio>
+            <audio id="wallah_krise">
+                <source src="audio/wallah_krise.mp3" type="audio/mpeg" />
+            </audio>
+             <audio id="was_ist_denn_hier_los">
+                <source src="audio/was_ist_denn_hier_los.mp3" type="audio/mpeg" />
+            </audio>
             <audio id="windows_10_error">
                 <source src="audio/windows_10_error.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="zois_singt_shakira">
+                <source src="audio/zois_singt_shakira.mp3" type="audio/mpeg" />
             </audio>
         </div>
 
     <script>
         // Funktion zum Abspielen des Sounds
-        function playSound(audioId) {
+        function playSound(audioId, event) {
             // Pause alle Audios
             $("audio").each(function() {
                 this.pause();
@@ -80,8 +133,29 @@ Soundboard</title>
             var audio = document.getElementById(audioId);
             if (audio) {
                 audio.play();
-            }
+                event.preventDefault();
+                }
         }
+
+        function getRandomColor() {
+            var colors = ['#d6d64d', '#FF0000', '#0099ff', '#FF69B4', '#FF1493', '#00bbff', '#00ff77', '#8800ff', '#ff7700'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Funktion, um zufällige Farben auf alle Buttons anzuwenden
+        function applyRandomColors() {
+            var buttons = document.querySelectorAll('a.button');
+            buttons.forEach(function(button) {
+                var randomColor = getRandomColor();
+                button.style.backgroundColor = randomColor;
+            });
+        }
+
+        // Anwenden der zufälligen Farben, sobald das Dokument bereit ist
+        $(document).ready(function() {
+            applyRandomColors();
+        });
+
     </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
