@@ -15,7 +15,7 @@ Soundboard</title>
 
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> Das beste Soundboard, was die Welt jemals gesehen hat!</span></b></p>
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> **Erstellt von Simon**</span></b></p>
-    <a class="button" href="#" onclick="playSound('among_us_role_reveal')">Among Us Role Reveal</a>
+    <a class="button" href="#" onclick="playSound('among_us_role_reveal', event)">Among Us Role Reveal</a>
     <a class="button" href="#" onclick="playSound('apored_jajaja')">ApoRed jajaja</a>
     <a class="button" href="#" onclick="playSound('apored_ich_bin_ein_macher')">ApoRed ich bin ein Macher</a>
     <a class="button" href="#" onclick="playSound('apored_will_er_mich_ficken')">ApoRed will er mich f*cken</a>
@@ -39,7 +39,7 @@ Soundboard</title>
     <a class="button" href="#" onclick="playSound('wallah_krise')">Wallah Krise</a>
     <a class="button" href="#" onclick="playSound('was_ist_denn_hier_los')">Was ist denn hier los?</a>
     <a class="button" href="#" onclick="playSound('windows_10_error')">Windows 10 error</a>
-    <a class="button" href="#" onclick="playSound('zois_singt_shakira')">Zois singt Shakira</a>
+    <a class="button" href="#" onclick="playSound('zois_singt_shakira', event)">Zois singt Shakira</a>
 
     <!-- Audio Elemente -->
         <div class="player">
@@ -124,6 +124,7 @@ Soundboard</title>
         // Funktion zum Abspielen des Sounds
         function playSound(audioId, event) {
             // Pause alle Audios
+            event.preventDefault()
             $("audio").each(function() {
                 this.pause();
                 this.currentTime = 0; // Zurück zum Anfang setzen
@@ -133,7 +134,6 @@ Soundboard</title>
             var audio = document.getElementById(audioId);
             if (audio) {
                 audio.play();
-                event.preventDefault();
                 }
         }
 
