@@ -15,6 +15,9 @@ Soundboard</title>
 
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> Das beste Soundboard, was die Welt jemals gesehen hat!</span></b></p>
 <p style="text-align: center"><b><span style="color: #e9cf6c; font-size: 17px; "> **Erstellt von Simon**</span></b></p>
+<div id="loadingGif" style="text-align: center;">
+<img src="img/loading.gif" alt="Soundboard lädt..." style="width: 100px; height: auto;">
+</div>
     <a class="button" href="#" onclick="playSound('among_us_role_reveal', event)">Among Us Role Reveal</a>
     <a class="button" href="#" onclick="playSound('apored_jajaja', event)">ApoRed jajaja</a>
     <a class="button" href="#" onclick="playSound('apored_ich_bin_ein_macher', event)">ApoRed ich bin ein Macher</a>
@@ -172,6 +175,8 @@ Soundboard</title>
 
         // Wende zufällige Farben auf die Buttons an
         applyRandomColors();
+
+        document.getElementById('loadingGif').style.display = 'none';
     };
 
     </script>

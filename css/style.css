@@ -66,6 +66,14 @@ audio {
     display: none;
 }
 
+#loadingGif {
+    position: fixed; /* Damit es über dem Rest der Seite bleibt */
+    top: 50%; /* Zentriere vertikal */
+    left: 50%; /* Zentriere horizontal */
+    transform: translate(-50%, -50%); /* Korrektur der Position */
+    z-index: 9999; /* Über anderen Inhalten anzeigen */
+}
+
 @media only screen and (min-width: 768px) {
   body {
     margin-left: 50px;
