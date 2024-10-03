@@ -57,7 +57,7 @@ a.button {
             padding: 14px 20px;
             color: #292f33; /* Textfarbe Weiß */
             border-radius: 5px;
-            display: inline-block;
+            display: none;
             transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
             margin: 3px 0; /* Abstand oben und unten von 10px */
         }
