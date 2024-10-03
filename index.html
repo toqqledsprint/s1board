@@ -94,7 +94,7 @@ Soundboard</title>
             <audio id="loading">
                 <source src="audio/loading.mp3" type="audio/mpeg" />
             </audio>
-            <audio id="monte_singts">
+            <audio id="monte_singt">
                 <source src="audio/monte_singt.mp3" type="audio/mpeg" />
             </audio>
             <audio id="okay_lets_go">
@@ -138,42 +138,54 @@ Soundboard</title>
             </audio>
         </div>
 
-    <script>
-        // Funktion zum Abspielen des Sounds
-        function playSound(audioId, event) {
-            // Pause alle Audios
-            event.preventDefault()
-            $("audio").each(function() {
-                this.pause();
-                this.currentTime = 0; // Zurück zum Anfang setzen
-            });
+<script>
+    // Funktion zum Abspielen des Sounds
+    function playSound(audioId, event) {
+        // Verhindere das Standard-Link-Verhalten
+        event.preventDefault();
 
-            // Spiele den ausgewählten Audio-Clip ab
-            var audio = document.getElementById(audioId);
-            if (audio) {
-                audio.play();
-                }
-        }
-
-        function getRandomColor() {
-            var colors = ['#d6d64d', '#FF0000', '#0099ff', '#FF69B4', '#FF1493', '#00bbff', '#00ff77', '#8800ff', '#ff7700'];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
-
-        function applyRandomColors() {
-            var buttons = document.querySelectorAll('a.button');
-            buttons.forEach(function(button) {
-                var randomColor = getRandomColor();
-                button.style.backgroundColor = randomColor;
-            });
-        }
-
-        // Anwenden der zufälligen Farben, sobald das Dokument bereit ist
-        $(document).ready(function() {
-            applyRandomColors();
+        // Stoppe alle anderen Audios
+        document.querySelectorAll('audio').forEach(function(audio) {
+            audio.pause();
+            audio.currentTime = 0; // Zurück zum Anfang setzen
         });
 
-    </script>
+        // Überprüfen, ob das Audio-Element bereits existiert
+        var existingAudio = document.getElementById(audioId);
+
+        if (!existingAudio) {
+            // Wenn das Audio noch nicht existiert, erstelle es dynamisch
+            var audio = document.createElement('audio');
+            audio.id = audioId;
+            audio.src = 'audio/' + audioId + '.mp3'; // Quelle zur MP3-Datei
+            document.body.appendChild(audio);
+            audio.play();
+        } else {
+            // Wenn es existiert, spiele es einfach ab
+            existingAudio.play();
+        }
+    }
+
+    // Funktion, um eine zufällige Farbe zu erhalten
+    function getRandomColor() {
+        var colors = ['#d6d64d', '#FF0000', '#0099ff', '#FF69B4', '#FF1493', '#00bbff', '#00ff77', '#8800ff', '#ff7700'];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Funktion, um zufällige Farben auf alle Buttons anzuwenden
+    function applyRandomColors() {
+        var buttons = document.querySelectorAll('a.button');
+        buttons.forEach(function(button) {
+            var randomColor = getRandomColor();
+            button.style.backgroundColor = randomColor;
+        });
+    }
+
+    // Anwenden der zufälligen Farben, sobald das Dokument vollständig geladen ist
+    $(document).ready(function() {
+        applyRandomColors();
+    });
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
 
