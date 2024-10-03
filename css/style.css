@@ -62,6 +62,10 @@ a.button {
             margin: 3px 0; /* Abstand oben und unten von 10px */
         }
 
+audio {
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     margin-left: 50px;
