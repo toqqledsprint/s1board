@@ -45,7 +45,7 @@ p.nolineheight {
 
 a.button {
             background-color: #e9dc6c;
-            font-size: 18px;
+            font-size: 14px;
             font-family: Helvetica, Arial, sans-serif;
             font-weight: bold;
             text-decoration: none;
@@ -55,6 +55,7 @@ a.button {
             transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
             margin: 3px 0; /* Abstand oben und unten von 10px */
             display: inline-block;
+            cursor: pointer;
         }
 
 @media only screen and (min-width: 768px) {
