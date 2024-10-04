@@ -67,8 +67,6 @@
     let currentAudio = null; // Variable für das aktuell abgespielte Audio
 
         function playSound(audioId, event) {
-            // Stoppe das aktuelle Audio, wenn es spielt
-            event.preventDefault();
             if (currentAudio) {
                 currentAudio.pause();
                 currentAudio.currentTime = 0; // Zurücksetzen auf den Anfang
