@@ -64,43 +64,18 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     let currentAudio = null; // Variable für das aktuell abgespielte Audio
-    let audioContext = new (window.AudioContext || window.webkitAudioContext)(); // Web Audio API context
-    let gainNode = audioContext.createGain(); // Gain Node für Lautstärkeanpassung
-    let currentGainValue = 0.5; // Startlautstärke für alle Audios
 
-    // Funktion zum Abspielen eines Sounds und Steuern der Lautstärke
-    function playSound(audioId, event) {
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0; // Zurücksetzen auf den Anfang
-        }
-
-        // Erstelle den Pfad zur Audio-Datei
-        const audioPath = `audio/${audioId}.mp3`;
-        currentAudio = new Audio(audioPath);
-        
-        // Erstelle einen MediaElementSource für das Audio
-        let sourceNode = audioContext.createMediaElementSource(currentAudio);
-
-        // Verbinde die Audioquelle mit dem Gain Node und schließlich mit dem Ziel (lautsprecher)
-        sourceNode.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-
-        // Setze die Ausgangslautstärke für das Audio
-        gainNode.gain.setValueAtTime(currentGainValue, audioContext.currentTime); // Lautstärke auf Startwert setzen
-        currentAudio.play(); // Audio abspielen
-
-        // Lautstärke schrittweise erhöhen
-        let targetGainValue = 1; // Ziel-Lautstärke (maximal)
-        let increaseVolume = setInterval(function() {
-            if (currentGainValue < targetGainValue) {
-                currentGainValue += 0.05; // Erhöhe die Lautstärke um 5% alle 100ms
-                gainNode.gain.setValueAtTime(currentGainValue, audioContext.currentTime);
-            } else {
-                clearInterval(increaseVolume); // Stoppe, wenn die Lautstärke 100% erreicht hat
+        function playSound(audioId, event) {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0; // Zurücksetzen auf den Anfang
             }
-        }, 100); // Lautstärke alle 100 Millisekunden erhöhen
-    }
+
+            // Erstelle den Pfad zur Audio-Datei
+            const audioPath = `audio/${audioId}.mp3`;
+            currentAudio = new Audio(audioPath);
+            currentAudio.play(); // Audio abspielen
+        }
 
     // Funktion, um eine zufällige Farbe zu erhalten
     function getRandomColor() {
